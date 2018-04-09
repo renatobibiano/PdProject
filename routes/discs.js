@@ -4,61 +4,49 @@ var Disc=require('../models/Disc')
 
 router.get('/:id?',function(req,res,next){
 	if(req.params.id){
-		Disc.getDiscById(req.params.id,function(err,rows){
-			if(err) {
-	  			res.json(err);
-	  		} else {
-	  			res.json(rows);
-	  		}
-	  	});
+		Disc.getDiscById(req.params.id).then(function(rows){
+			res.json(rows);
+		}).catch(function(err){
+			res.json(err);
+		});
 	 } else {
-	 	Disc.getAllDiscs(function(err,rows){
-			if(err) {
-				res.json(err);
-			} else {
-				res.json(rows);
-			}
+	 	Disc.getAllDiscs().then(function(rows){
+			res.json(rows);
+		}).catch(function(err){
+			res.json(err);
 		});
 	}
 });
 
 router.get('/:text?',function(req,res,next){
-	Disc.searchDisc(function(err,rows){
-		if(err) {
-			res.json(err);
-		} else {
-			res.json(rows);
-		}
+	Disc.searchDisc().then(function(rows){
+		res.json(rows);
+	}).catch(function(err){
+		res.json(err);
 	});
 });
 
 router.post('/',function(req,res,next){
-	Disc.addDisc(req.body,function(err,count){
-		if(err) {
-			res.json(err);
-		} else {
-			res.json(req.body);//or return count for 1 &amp;amp;amp; 0
-		}
+	Disc.addDisc(req.body).then(function(rows){
+		res.json(rows);
+	}).catch(function(err){
+		res.json(err);
 	});
 });
 
 router.delete('/:id',function(req,res,next){
-	Disc.deleteDisc(req.params.id,function(err,count){
-		if(err) {
-			res.json(err);
-		} else {
-			res.json(count);
-		}
+	Disc.deleteDisc(req.params.id).then(function(rows){
+		res.json(rows);
+	}).catch(function(err){
+		res.json(err);
 	});
 });
 
 router.put('/:id',function(req,res,next){
-	Disc.updateDisc(req.params.id,req.body,function(err,rows){
-		if(err) {
-			res.json(err);
-		} else {
-			res.json(rows);
-		}
+	Disc.updateDisc(req.params.id,req.body).then(function(rows){
+		res.json(rows);
+	}).catch(function(err){
+		res.json(err);
 	});
 });
 
