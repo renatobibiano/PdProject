@@ -1,5 +1,7 @@
 Para rodar o servidor é preciso apenas executar o comando "npm start" dentro da pasta do projeto (com o NPM instalado).
 
+O arquivo createSqlSchema.sql tem o script para a criação do banco de dados para a API.
+
 A API disponibiliza os seguintes métodos:
 - Obter os discos de uma coleção: GET para http://localhost:3000/collections/[ID] - sendo [ID] o ID da coleção
 - Buscar um disco por ID: GET para http://localhost:3000/discs/[ID] - sendo [ID] o ID do disco
