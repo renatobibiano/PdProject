@@ -7,6 +7,6 @@ A API disponibiliza os seguintes métodos:
 - Buscar discos por nome: GET para http://localhost:3000/discs/?text=[TEXTO] - sendo [TEXTO] a palavra buscada
 - Apagar um disco: DELETE para http://localhost:3000/discs/[ID] - sendo [ID] o ID do disco
 - Atualizar informações de disco: PUT para http://localhost:3000/discs/[ID] - sendo [ID] o ID do disco
- - Passando os parâmetros "name" e "year" com as informações do disco
+  - Passando os parâmetros "name" e "year" com as informações do disco
 - Inserir um novo disco: POST para http://localhost:3000/discs/
- - Passando os parâmetros "name" e "year" com as informações do disco, e o parâmetro "col_id" com o ID da coleção.
+  - Passando os parâmetros "name" e "year" com as informações do disco, e o parâmetro "col_id" com o ID da coleção.
