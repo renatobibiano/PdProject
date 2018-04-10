@@ -1,6 +1,8 @@
 API DE DISCOS E COLEÇÕES - USANDO NODE.JS, MySQL E EXPRESS.JS
 
-Para rodar o servidor é preciso apenas executar o comando "npm start" dentro da pasta do projeto (com o NPM instalado).
+Para rodar o servidor é preciso apenas executar os seguintes comandos:
+ - npm install
+ - npm start
 
 O arquivo createSqlSchema.sql tem o script para a criação do banco de dados para a API. Dentro do arquivo "dbconnection.js" devem ser configurados as informações para conexão com o banco de dados.
 
